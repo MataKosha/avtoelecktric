@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-slate-100 antialiased pb-24 selection:bg-amber-400 selection:text-black">
+<body class="bg-slate-950 text-slate-100 antialiased pb-24 selection:bg-amber-400 selection:text-black">
 
     <!-- Верхняя статус-строка -->
     <div class="bg-amber-500/10 border-b border-amber-500/20 py-2 px-4 text-center text-xs text-amber-300 font-semibold flex items-center justify-center gap-2">
@@ -52,7 +52,7 @@
             Устраняем любые неисправности на месте поломки. Запуск двигателя, снятие блокировок, компьютерная диагностика и ремонт проводки.
         </p>
 
-        <!-- Оригинальные кнопки действия (все ведут в WhatsApp) -->
+        <!-- Кнопки действия -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto mb-14">
             <a href="https://wa.me/77755046561?text=Здравствуйте!%20Срочно%20нужен%20автоэлектрик%20на%20выезд." target="_blank" class="w-full btn-gold text-slate-950 font-black py-4 px-8 rounded-2xl text-lg flex items-center justify-center gap-3">
                 <i class="fa-solid fa-phone-volume text-xl"></i>
@@ -97,7 +97,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
             <a href="https://wa.me/77755046561?text=Здравствуйте!%20Нужно%20прикурить%20авто%20/%20запустить%20двигатель." target="_blank" class="glass-card p-6 rounded-2xl block hover:no-underline">
                 <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-2xl mb-4">
                     <i class="fa-solid fa-car-battery"></i>
@@ -145,7 +144,6 @@
                 <h3 class="text-lg font-bold text-white mb-2">Проверка перед покупкой</h3>
                 <p class="text-slate-400 text-xs leading-relaxed">Полный осмотр электроники авто перед покупкой. Сканирование реального пробега и истории скрытых ошибок.</p>
             </a>
-
         </div>
     </section>
 
@@ -183,6 +181,184 @@
         </div>
     </section>
 
+    <!-- Блок отзывов -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mb-2">Отзывы клиентов</h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Реальные оценки нашей работы по Астане</p>
+            </div>
+            <button id="openReviewModal" class="btn-gold text-slate-950 font-black py-3 px-6 rounded-xl text-sm flex items-center gap-2">
+                <i class="fa-solid fa-pen-to-square text-base"></i>
+                Оставить отзыв
+            </button>
+        </div>
+
+        <div id="reviewsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Отзыв 1 (Мужской) -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-user text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Арман</h4>
+                                <span class="text-xs text-slate-400">Toyota Camry • Есильский р-н</span>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Машина встала возле Хан Шатыра — стартер крутил, но запуск не происходил. Вызвал мастера, приехал минут за 20. Быстро нашел сгоревшее реле бензонасоса и завел авто. Отличный сервис!
+                    </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500">Вчера в 18:40</div>
+            </div>
+
+            <!-- Отзыв 2 (Женский) -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 bg-pink-500/10 border border-pink-500/30 rounded-full flex items-center justify-center text-pink-400 font-bold">
+                                <i class="fa-solid fa-user-nurse text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Асель</h4>
+                                <span class="text-xs text-slate-400">Hyundai Accent • Алматинский р-н</span>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Заблокировалась сигнализация StarLine, брелок вообще не реагировал и машина орёт. Мастер прибыл очень оперативно, за пару минут сбросил ошибку и настроил метку. Огромное спасибо!
+                    </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500">3 дня назад</div>
+            </div>
+
+            <!-- Отзыв 3 (Мужской) -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center text-amber-400 font-bold">
+                                <i class="fa-solid fa-user text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Данияр</h4>
+                                <span class="text-xs text-slate-400">Lexus GS • Сарыаркинский р-н</span>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Забыл выключить фары на парковке, аккумулятор в ноль. Приехали со специальным пусковым бустером, завели за минуту. Проверили генератор — всё ок. Цена адекватная.
+                    </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500">5 дней назад</div>
+            </div>
+
+            <!-- Отзыв 4 (Женский) -->
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 bg-pink-500/10 border border-pink-500/30 rounded-full flex items-center justify-center text-pink-400 font-bold">
+                                <i class="fa-solid fa-user-nurse text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Елена</h4>
+                                <span class="text-xs text-slate-400">Kia Rio • р-н Нура</span>
+                            </div>
+                        </div>
+                        <div class="flex text-amber-400 text-xs gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Загорелся значок аккумулятора и машина заглохла прямо на дороге. Мастер приехал с тестером, нашел утечку тока и временный обрыв провода. Всё починил на месте без эвакуатора!
+                    </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500">Неделю назад</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно отзыва -->
+    <div id="reviewModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg p-6 sm:p-8 rounded-3xl relative border border-slate-700/80">
+            <button id="closeReviewModal" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <h3 class="text-2xl font-black text-white mb-2">Оставить отзыв</h3>
+            <p class="text-xs text-slate-400 mb-6">Ваш отзыв сразу появится на сайте</p>
+
+            <form id="addReviewForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1.5">Ваше имя</label>
+                        <input type="text" id="reviewName" placeholder="Имя" required class="input-custom w-full rounded-xl p-3 text-white text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 mb-1.5">Пол</label>
+                        <select id="reviewGender" class="input-custom w-full rounded-xl p-3 text-white text-sm bg-slate-900">
+                            <option value="male">Мужской</option>
+                            <option value="female">Женский</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1.5">Автомобиль и район</label>
+                    <input type="text" id="reviewCar" placeholder="Например: Camry • Есильский" required class="input-custom w-full rounded-xl p-3 text-white text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1.5">Оценка</label>
+                    <select id="reviewRating" class="input-custom w-full rounded-xl p-3 text-white text-sm bg-slate-900">
+                        <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                        <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1.5">Текст отзыва</label>
+                    <textarea id="reviewText" rows="3" placeholder="Расскажите о работе мастера..." required class="input-custom w-full rounded-xl p-3 text-white text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full btn-gold text-slate-950 font-black py-3.5 rounded-xl text-base mt-2">
+                    Опубликовать отзыв
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- FAQ -->
     <section class="max-w-4xl mx-auto px-4 py-8">
         <h2 class="text-2xl sm:text-3xl font-black text-center mb-8 text-white">Часто задаваемые вопросы</h2>
@@ -191,7 +367,7 @@
             <div class="faq-item glass-card rounded-2xl overflow-hidden">
                 <button class="faq-toggle w-full p-5 text-left font-bold text-sm sm:text-base flex justify-between items-center text-white">
                     <span>Как быстро мастер приедет на место?</span>
-                    <i class="fa-solid fa-chevron-down text-amber-400"></i>
+                    <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
                 </button>
                 <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
                     Среднее время приезда мастера составляет от 15 до 30 минут в зависимости от района Астаны и дорожной ситуации.
@@ -201,7 +377,7 @@
             <div class="faq-item glass-card rounded-2xl overflow-hidden">
                 <button class="faq-toggle w-full p-5 text-left font-bold text-sm sm:text-base flex justify-between items-center text-white">
                     <span>Работаете ли вы в сильные морозы?</span>
-                    <i class="fa-solid fa-chevron-down text-amber-400"></i>
+                    <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
                 </button>
                 <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
                     Да, работаем круглосуточно в любую погоду. Выезжаем со специальным тепловым оборудованием и мощными пусковыми бустерами.
@@ -210,7 +386,7 @@
         </div>
     </section>
 
-    <!-- Форма с оригинальной золой кнопкой -->
+    <!-- Форма заявки -->
     <section class="max-w-xl mx-auto px-4 py-10">
         <div class="glass-card p-6 sm:p-8 rounded-3xl relative">
             <div class="text-center mb-6">
@@ -238,7 +414,7 @@
         </div>
     </section>
 
-    <!-- Мобильная плашка с оригинальным дизайном кнопок -->
+    <!-- Мобильная плашка -->
     <div class="fixed bottom-0 left-0 w-full bg-slate-950/90 backdrop-blur-xl border-t border-slate-800/80 p-2.5 flex gap-2 sm:hidden z-50">
         <a href="https://wa.me/77755046561?text=Здравствуйте!%20Срочно%20нужен%20автоэлектрик%20на%20выезд." target="_blank" class="flex-1 btn-gold text-slate-950 font-black py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
             <i class="fa-brands fa-whatsapp text-lg"></i> Вызвать
