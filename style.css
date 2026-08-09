@@ -21,7 +21,7 @@
 
 /* Glassmorphism карточки */
 .glass-card {
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(51, 65, 85, 0.6);
@@ -35,7 +35,7 @@
 
 /* Стили полей ввода */
 .input-custom {
-    background: rgba(2, 6, 23, 0.7);
+    background: rgba(2, 6, 23, 0.8);
     border: 1px solid rgba(51, 65, 85, 0.8);
     transition: all 0.2s ease;
 }
@@ -43,18 +43,18 @@
 .input-custom:focus {
     outline: none;
     border-color: #f59e0b;
-    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
 }
 
 /* Анимация всплытия отзыва */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-12px) scale(0.98);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
