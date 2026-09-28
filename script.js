@@ -1,4 +1,4 @@
-const WHATSAPP_PHONE = "77772805721";
+const WHATSAPP_PHONE = "77051915003";
 
 // --- 1. Аккордеон FAQ ---
 document.querySelectorAll('.faq-toggle').forEach(button => {
