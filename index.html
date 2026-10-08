@@ -51,10 +51,11 @@
 
             <div class="flex items-center gap-3">
                 <!-- Переключатель языков -->
-                <div class="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs font-bold">
-                    <button id="btn-ru" onclick="switchLang('ru')" class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-black transition">RU</button>
-                    <button id="btn-kk" onclick="switchLang('kk')" class="px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition">ҚАЗ</button>
-                </div>
+               <div class="flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
+    <button data-lang="ru" class="px-2.5 py-1 rounded-lg transition-all duration-200">RU</button>
+    <button data-lang="kk" class="px-2.5 py-1 rounded-lg transition-all duration-200">KZ</button>
+    <button data-lang="en" class="px-2.5 py-1 rounded-lg transition-all duration-200">EN</button>
+</div>
 
                 <a href="https://wa.me/77051915003?text=Здравствуйте!%20Мне%20нужен%20срочный%20выезд%20автоэлектрика." onclick="trackConversion()" target="_blank" class="btn-gold text-slate-950 font-black py-2.5 px-5 rounded-xl text-sm flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
