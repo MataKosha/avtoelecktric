@@ -1,532 +1,303 @@
 const WHATSAPP_PHONE = "77051915003";
 
-// --- 1. Полный словарь переводов (RU / KK / EN) ---
+// Объект переводов (RU, KZ, EN)
 const translations = {
     ru: {
-        // Шапка / Навигация
-        navServices: "Услуги",
-        navAdvantages: "Преимущества",
-        navFaq: "Часто задаваемые вопросы",
-        navReviews: "Отзывы",
-        navContact: "Контакты",
-        callEmergency: "Срочный выезд 24/7",
-
-        // Главный блок (Hero)
-        heroBadge: "⚡ Выезд от 20 минут по Астане",
-        heroTitle: "Срочный выезд автоэлектрика в Астане",
-        heroSubtitle: "Компьютерная диагностика, запуск двигателя, отключение сигнализаций и ремонт автоэлектрики на месте.",
-        btnCallMaster: "Вызвать мастера",
-        btnWhatsApp: "Написать в WhatsApp",
-        heroStat1: "15+ лет опыта",
-        heroStat2: "24/7 Без выходных",
-        heroStat3: "100% Гарантия",
-
-        // Секция Услуг
-        servicesTitle: "Наши услуги",
-        servicesSubtitle: "Решаем любые проблемы с электрикой автомобилей всех марок",
-        service1Title: "Запуск двигателя / Прикурить",
-        service1Desc: "Прикурить 12/24V, замена аккумулятора, запуск заглохшего авто.",
-        service2Title: "Компьютерная диагностика",
-        service2Desc: "Сброс ошибок (Check Engine), чтение всех блоков сканерами Launch и Autel.",
-        service3Title: "Отключение сигнализаций",
-        service3Desc: "Аварийное отключение StarLine, Pandora, иммобилайзеров и метки.",
-        service4Title: "Генераторы и стартеры",
-        service4Desc: "Диагностика и ремонт на месте, замена бендикса, реле, щеток.",
-        service5Title: "Короткое замыкание",
-        service5Desc: "Поиск утечки тока, ремонт проводки после замыкания или воды.",
-        service6Title: "Установка оборудования",
-        service6Desc: "Установка автосигнализаций, парктроников, видеорегистраторов и LED.",
-
-        // Преимущества
-        advTitle: "Почему выбирают нас",
-        adv1Title: "Быстрый приезд",
-        adv1Desc: "Приедем в любой район Астаны за 20–40 минут.",
-        adv2Title: "Проф. оборудование",
-        adv2Desc: "Используем мультисканеры дилерского уровня.",
-        adv3Title: "Честные цены",
-        adv3Desc: "Стоимость озвучивается до начала проведения работ.",
-
-        // Форма заявки
-        formTitle: "Нужен автоэлектрик прямо сейчас?",
-        formSubtitle: "Заполните форму и мастер свяжется с вами в течение 2 минут",
-        nameLabel: "Ваше имя",
-        namePlaceholder: "Например, Арман",
-        phoneLabel: "Номер телефона",
-        phonePlaceholder: "+7 (705) 000-00-00",
-        issueLabel: "Проблема / Марка авто",
-        issuePlaceholder: "Например, Toyota Camry, не заводится",
-        btnSubmitForm: "Отправить в WhatsApp",
-
-        // Вопросы и ответы (FAQ)
-        faqTitle: "Часто задаваемые вопросы",
-        faq1Q: "Как быстро приезжает автоэлектрик?",
-        faq1A: "В среднем мастер приезжает за 20–40 минут в зависимости от пробок и района Астаны.",
-        faq2Q: "Сколько стоит выезд и диагностика?",
-        faq2A: "Выезд и первичная компьютерная диагностика стоит от 5 000 ₸. Точную цену мастер озвучит по телефону.",
-        faq3Q: "Выезжаете ли вы за город / на трассу?",
-        faq3A: "Да, выезжаем в пригород Астаны (Косшы, Жибек Жолы, Ильинка и др.). Стоимость оговаривается отдельно.",
-        faq4Q: "Какая гарантия на выполненные работы?",
-        faq4A: "Мы даем гарантию на выполненный ремонт от 1 до 6 месяцев в зависимости от вида работ.",
-
-        // Отзывы и Модальное окно
-        reviewsTitle: "Отзывы клиентов",
-        btnOpenReviewModal: "Оставить отзыв",
-        modalTitle: "Написать отзыв",
-        reviewNameLabel: "Ваше имя",
-        reviewNamePlaceholder: "Арман",
-        reviewGenderLabel: "Пол",
-        genderMale: "Мужской",
-        genderFemale: "Женский",
-        reviewCarLabel: "Автомобиль",
-        reviewCarPlaceholder: "Lexus GS300",
-        reviewRatingLabel: "Оценка",
-        reviewTextLabel: "Ваш отзыв",
-        reviewTextPlaceholder: "Опишите впечатления о работе...",
-        btnSubmitReview: "Опубликовать отзыв",
-
-        // WhatsApp Сообщения
-        waGreeting: "Здравствуйте! Меня зовут",
-        waPhone: "Мой телефон",
-        waIssueLabel: "Проблема / Авто",
-        waDefaultIssue: "Нужен срочный выезд автоэлектрика.",
-
-        // Футер & Статусы
-        today: "Сегодня",
-        justNow: "Только что",
-        footerRights: "Все права защищены.",
-        footerLocation: "г. Астана, выезд по всему городу и пригороду"
+        doc_title: "Выездной Автоэлектрик Астана 24/7 | Срочная Диагностика и Ремонт",
+        top_bar: "Дежурный экипаж на линии в Астане. Выезд от 15 минут!",
+        header_sub: "Астана • 24/7",
+        btn_header: "Срочный вызов",
+        badge_equipment: "Профессиональное дилерское оборудование",
+        hero_title: 'Срочный ремонт автоэлектрики <br class="hidden sm:block"/> с выездом по Астане <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">24/7</span>',
+        hero_desc: "Устраняем любые неисправности на месте поломки. Запуск двигателя, снятие блокировок, компьютерная диагностика и ремонт проводки.",
+        btn_call: "Вызвать мастера",
+        feat1_title: "Приезд 15–25 мин",
+        feat1_sub: "Во всех районах",
+        feat2_title: "Круглосуточно",
+        feat2_sub: "Без выходных 24/7",
+        feat3_title: "Мультисканер",
+        feat3_sub: "Точное чтение блоков",
+        feat4_title: "Ремонт на месте",
+        feat4_sub: "Без эвакуатора",
+        services_title: "Услуги выездного автоэлектрика",
+        services_subtitle: "Оперативно решаем проблемы любой сложности прямо на месте парковки",
+        serv1_title: "Запуск ДВС / Прикурить 12V–24V",
+        serv1_desc: "Безопасный запуск двигателя с севшим АКБ профессиональным пусковым бустером без риска для электроники.",
+        serv2_title: "Компьютерная диагностика",
+        serv2_desc: "Глубокое сканирование ЭБУ, АКПП, ABS, SRS Airbag. Расшифровка и сброс ошибок Check Engine на месте.",
+        serv3_title: "Отключение сигнализаций",
+        serv3_desc: "Аварийное отключение и разблокировка StarLine, Pandora, Tomahawk, иммобилайзеров и секретных кнопок.",
+        serv4_title: "Утечки тока и замыкания",
+        serv4_desc: "Устранение причин быстрого разряда аккумулятора. Поиск коротких замыканий и замена сгоревших проводов.",
+        serv5_title: "Ремонт генераторов и стартеров",
+        serv5_desc: "Диагностика системы зарядки. Экспресс-замена щеток, реле-регулятора, бендикса и втягивающего реле.",
+        serv6_title: "Проверка перед покупкой",
+        serv6_desc: "Полный осмотр электроники авто перед покупкой. Сканирование реального пробега и истории скрытых ошибок.",
+        districts_title: "Зона выезда по Астане и пригороду",
+        districts_desc: "Экипажи распределены по всем районам столицы для максимальной скорости прибытия",
+        btn_eta: "Уточнить время прибытия",
+        dist1_title: "Есильский р-н",
+        dist1_desc: "Левый берег, Экспо, Хан Шатыр",
+        dist2_title: "Алматинский р-н",
+        dist2_desc: "Правый берег, Юго-Восток, Пирамида",
+        dist3_title: "Сарыаркинский р-н",
+        dist3_desc: "Старый город, Вокзал, Набережная",
+        dist4_title: "Байконур и Нура",
+        dist4_desc: "Промзона, Жагалау, Ильинка",
+        rating_badge: "Рейтинг 5.0 из 5 на основе отзывов клиентов",
+        reviews_title: "Отзывы наших клиентов",
+        reviews_subtitle: "Реальные отзывы автовладельцев, которым мы помогли на дороге в Астане",
+        rev1_name: "Арман Нурланов",
+        rev1_car: "Toyota Camry • Есильский р-н",
+        rev1_text: "Застрял ночью возле Хан Шатыра, машина вообще не реагировала на ключ. Мастер приехал через 20 минут, быстро определил причину — сбой сигнализации. Отключил блокировку и завел мотор. Огромное спасибо за оперативность!",
+        rev2_name: "Дмитрий М.",
+        rev2_car: "Hyundai Tucson • Алматинский р-н",
+        rev2_text: "В -30 разрядился аккумулятор, обычный бустер друзей не справлялся. Вызвал автоэлектрика — приехали с мощным оборудованием, прикурили за пару минут и проверили генератор. Отличный сервис!",
+        rev3_name: "Бауыржан К.",
+        rev3_car: "Lexus GS • Сарыаркинский р-н",
+        rev3_text: "Появилась утечка тока, за ночь АКБ садился в ноль. Специалист приехал со сканером и мультиметром, за час вычислил короткое замыкание в магнитоле и всё исправил на месте. Цены адекватные.",
+        rev4_name: "Елена В.",
+        rev4_car: "Kia Rio • р-н Нура",
+        rev4_text: "Заказывала выездную диагностику перед покупкой авто. Мастер проверил все блоки управления, нашел скрытые ошибки и честно сказал, что с электроникой всё в порядке. Очень помогли принять решение!",
+        faq_title: "Часто задаваемые вопросы",
+        faq1_q: "Как быстро мастер приедет на место?",
+        faq1_a: "Среднее время приезда мастера составляет от 15 до 30 минут в зависимости от района Астаны и дорожной ситуации.",
+        faq2_q: "Работаете ли вы в сильные морозы?",
+        faq2_a: "Да, работаем круглосуточно в любую погоду. Выезжаем со специальным тепловым оборудованием и мощными пусковыми бустерами.",
+        form_title: "Нужен мастер прямо сейчас?",
+        form_subtitle: "Оставьте заявку — сформируется сообщение в WhatsApp",
+        form_name_label: "Ваше имя",
+        form_name_ph: "Введите имя",
+        form_phone_label: "Номер телефона",
+        form_issue_label: "Марка авто и проблема",
+        form_issue_ph: "Пример: Тойота Камри, не заводится",
+        form_btn: "Срочно вызвать автоэлектрика",
+        mob_call: "Вызвать"
     },
-
-    kk: {
-        // Шапка / Навигация
-        navServices: "Қызметтер",
-        navAdvantages: "Артықшылықтар",
-        navFaq: "Сұрақ-жауап",
-        navReviews: "Пікірлер",
-        navContact: "Байланыс",
-        callEmergency: "Шұғыл шығу 24/7",
-
-        // Главный блок (Hero)
-        heroBadge: "⚡ Астана бойынша 20 минуттан бастап шығу",
-        heroTitle: "Астанадағы автоэлектриктің шұғыл шығуы",
-        heroSubtitle: "Компьютерлік диагностика, қозғалтқышты іске қосу, сигнализацияны өшіру және орнында жөндеу.",
-        btnCallMaster: "Шеберді шақыру",
-        btnWhatsApp: "WhatsApp-қа жазу",
-        heroStat1: "15+ жыл тәжірибе",
-        heroStat2: "24/7 Демалыссыз",
-        heroStat3: "100% Кепілдік",
-
-        // Секция Услуг
-        servicesTitle: "Біздің қызметтер",
-        servicesSubtitle: "Барлық маркалы көліктердің электр жүйесіндегі кез келген мәселені шешеміз",
-        service1Title: "Қозғалтқышты іске қосу / От алу",
-        service1Desc: "12/24V от алу, аккумуляторды ауыстыру, өшіп қалған көлікті оталдыру.",
-        service2Title: "Компьютерлік диагностика",
-        service2Desc: "Қателіктерді жою (Check Engine), Launch және Autel сканерлерімен тексеру.",
-        service3Title: "Сигнализацияны өшіру",
-        service3Desc: "StarLine, Pandora, иммобилайзерлерді және құпия түймелерді апаттық өшіру.",
-        service4Title: "Генераторлар мен стартерлер",
-        service4Desc: "Орнында диагностика жасау және жөндеу, бендикс, реле, щеткаларды ауыстыру.",
-        service5Title: "Қысқа тұйықталуды табу",
-        service5Desc: "Ток ағуын табу, тұйықталудан немесе судан кейін сымдарды қалпына келтіру.",
-        service6Title: "Жабдықтарды орнату",
-        service6Desc: "Сигнализация, парктрониктер, бейнетіркегіштер және LED шамдарды орнату.",
-
-        // Преимущества
-        advTitle: "Неліктен бізді таңдайды",
-        adv1Title: "Жылдам келу",
-        adv1Desc: "Астананың кез келген ауданына 20–40 минутта жетеміз.",
-        adv2Title: "Кәсіби жабдық",
-        adv2Desc: "Дилерлік деңгейдегі мультисканерлерді қолданамыз.",
-        adv3Title: "Әділ бағалар",
-        adv3Desc: "Жұмыс басталмай тұрып нақты құны айтылады.",
-
-        // Форма заявки
-        formTitle: "Автоэлектрик дәл қазір керек пе?",
-        formSubtitle: "Нысанды толтырыңыз, шебер 2 минут ішінде хабарласады",
-        nameLabel: "Сіздің атыңыз",
-        namePlaceholder: "Мысалы, Арман",
-        phoneLabel: "Телефон нөмірі",
-        phonePlaceholder: "+7 (705) 000-00-00",
-        issueLabel: "Мәселе / Көлік маркасы",
-        issuePlaceholder: "Мысалы, Toyota Camry, от алмай тұр",
-        btnSubmitForm: "WhatsApp арқылы жіберу",
-
-        // Вопросы и ответы (FAQ)
-        faqTitle: "Жиі қойылатын сұрақтар",
-        faq1Q: "Автоэлектрик қаншалықты тез келеді?",
-        faq1A: "Орташа есеппен кептелістер мен Астана ауданына байланысты шебер 20–40 минутта келеді.",
-        faq2Q: "Шығу және диагностика қанша тұрады?",
-        faq2A: "Шығу және алғашқы компьютерлік диагностика 5 000 ₸ басталады. Нақты бағаны шебер айтады.",
-        faq3Q: "Қала сыртына немесе трассаға шығасыздар ма?",
-        faq3A: "Иә, Астана маңына шығамыз (Қосшы, Жібек Жолы, Ильинка т.б.). Бағасы бөлек келісіледі.",
-        faq4Q: "Орындалған жұмыстарға қандай кепілдік бар?",
-        faq4A: "Жұмыс түріне байланысты 1 айдан 6 айға дейін кепілдік береміз.",
-
-        // Отзывы и Модальное окно
-        reviewsTitle: "Клиенттердің пікірлері",
-        btnOpenReviewModal: "Пікір қалдыру",
-        modalTitle: "Пікір жазу",
-        reviewNameLabel: "Сіздің атыңыз",
-        reviewNamePlaceholder: "Арман",
-        reviewGenderLabel: "Жынысы",
-        genderMale: "Ер",
-        genderFemale: "Әйел",
-        reviewCarLabel: "Көлік",
-        reviewCarPlaceholder: "Lexus GS300",
-        reviewRatingLabel: "Бағалау",
-        reviewTextLabel: "Сіздің пікіріңіз",
-        reviewTextPlaceholder: "Жұмыс туралы әсеріңізбен бөлісіңіз...",
-        btnSubmitReview: "Пікірді жариялау",
-
-        // WhatsApp Сообщения
-        waGreeting: "Сәлеметсіз бе! Менің атым",
-        waPhone: "Менің телефон нөмірім",
-        waIssueLabel: "Мәселе / Көлік",
-        waDefaultIssue: "Автоэлектриктің шұғыл шығуы қажет.",
-
-        // Футер & Статусы
-        today: "Бүгін",
-        justNow: "Жаңа ғана",
-        footerRights: "Барлық құқықтар қорғалған.",
-        footerLocation: "Астана қ., бүкіл қала мен қала маңына шығу"
+    kz: {
+        doc_title: "Шақыру бойынша автоэлектрик Астана 24/7 | Жедел диагностика және жөндеу",
+        top_bar: "Астанада кезекші экипаж желіде. 15 минуттан бастап жету!",
+        header_sub: "Астана • 24/7",
+        btn_header: "Шұғыл шақыру",
+        badge_equipment: "Кәсіби дилерлік жабдық",
+        hero_title: 'Астана бойынша шақырумен <br class="hidden sm:block"/> автоэлектрикті шұғыл жөндеу <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">24/7</span>',
+        hero_desc: "Кез келген ақауларды бұзылған жерде жоямыз. Қозғалтқышты іске қосу, бұғаттауды алып тастау, компьютерлік диагностика және сымдарды жөндеу.",
+        btn_call: "Шеберді шақыру",
+        feat1_title: "Жету уақыты 15–25 мин",
+        feat1_sub: "Барлық аудандарда",
+        feat2_title: "Тәулік бойы",
+        feat2_sub: "Демалыссыз 24/7",
+        feat3_title: "Мультисканер",
+        feat3_sub: "Блоктарды дәл оқу",
+        feat4_title: "Орында жөндеу",
+        feat4_sub: "Эвакуаторсыз",
+        services_title: "Автоэлектриктің шақыру бойынша қызметтері",
+        services_subtitle: "Кез келген күрделіліктегі мәселелерді дәл тұрақ орнында жедел шешеміз",
+        serv1_title: "Қозғалтқышты іске қосу / От алдыру 12V–24V",
+        serv1_desc: "Электроникаға қауіп төндірмей, кәсіби бустермен отырып қалған АКБ бар қозғалтқышты қауіпсіз іске қосу.",
+        serv2_title: "Компьютерлік диагностика",
+        serv2_desc: "ЭБУ, АКПП, ABS, SRS Airbag терең сканерлеу. Орында Check Engine қателіктерін анықтау және өшіру.",
+        serv3_title: "Дабыл жүйелерін (сигнализация) өшіру",
+        serv3_desc: "StarLine, Pandora, Tomahawk, иммобилайзерлер мен құпия батырмаларды апатты түрде өшіру және бұғаттан шығару.",
+        serv4_title: "Ток ағуы және қысқа тұйықталу",
+        serv4_desc: "Аккумулятордың жылдам отырып қалу себептерін жою. Қысқа тұйықталуды іздеу және күйген сымдарды ауыстыру.",
+        serv5_title: "Генераторлар мен стартерлерді жөндеу",
+        serv5_desc: "Зарядтау жүйесінің диагностикасы. Щеткаларды, реле-реттегішті, бендиксті экспресс-ауыстыру.",
+        serv6_title: "Сатып алу алдында тексеру",
+        serv6_desc: "Автокөлікті сатып алар алдында электрониканы толық тексеру. Нақты жүрісті және жасырын қателер тарихын сканерлеу.",
+        districts_title: "Астана және қала маңы бойынша шығу аймағы",
+        districts_desc: "Жету жылдамдығы максималды болуы үшін экипаждар елорданың барлық аудандарына бөлінген",
+        btn_eta: "Келу уақытын анықтау",
+        dist1_title: "Есіл ауданы",
+        dist1_desc: "Сол жағалау, Экспо, Хан Шатыр",
+        dist2_title: "Алматы ауданы",
+        dist2_desc: "Оң жағалау, Юго-Восток, Пирамида",
+        dist3_title: "Сарыарқа ауданы",
+        dist3_desc: "Ескі қала, Вокзал, Жағалау",
+        dist4_title: "Байқоңыр және Нұра",
+        dist4_desc: "Промзона, Жағалау, Ильинка",
+        rating_badge: "Клиенттердің пікірлері негізінде рейтинг 5.0-ден 5",
+        reviews_title: "Клиенттеріміздің пікірлері",
+        reviews_subtitle: "Астана жолында біз көмектескен автокөлік иелерінің шынайы пікірлері",
+        rev1_name: "Арман Нұрланов",
+        rev1_car: "Toyota Camry • Есіл ауданы",
+        rev1_text: "Түнде Хан Шатыр жанында тұрып қалдым, көлік кілтке мүлдем жауап бермеді. Шебер 20 минутта келді, себебін тез анықтады — сигнализация ақауы. Бұғаттауды өшіріп, моторды оталдырды. Жылдамдық үшін үлкен рахмет!",
+        rev2_name: "Дмитрий М.",
+        rev2_car: "Hyundai Tucson • Алматы ауданы",
+        rev2_text: "-30 градус аязда аккумулятор отырып қалды, достардың қарапайым бустері көмектеспеді. Автоэлектрикті шақырдым — қуатты жабдықпен келіп, екі минутта оталдырып, генераторды тексеріп берді. Керемет сервис!",
+        rev3_name: "Бауыржан Қ.",
+        rev3_car: "Lexus GS • Сарыарқа ауданы",
+        rev3_text: "Ток ағуы пайда болды, түнде АКБ нөлге отырып қалатын. Маман сканермен және мультиметрмен келіп, бір сағатта магнитоладағы қысқа тұйықталуды тапты да, орнында жөндеп берді. Бағалары тиімді.",
+        rev4_name: "Елена В.",
+        rev4_car: "Kia Rio • Нұра ауданы",
+        rev4_text: "Көлік сатып алар алдында шақыру бойынша диагностикаға тапсырыс бердім. Шебер барлық басқару блоктарын тексерді, жасырын қателіктерді тапты және электроникада бәрі дұрыс екенін ашық айтты. Шешім қабылдауға өте көмектесті!",
+        faq_title: "Жиі қойылатын сұрақтар",
+        faq1_q: "Шебер қаншалықты жылдам келеді?",
+        faq1_a: "Шебердің келуінің орташа уақыты Астана ауданына және жол жағдайына байланысты 15-тен 30 минутқа дейін созылады.",
+        faq2_q: "Қатты аязда жұмыс жасайсыздар ма?",
+        faq2_a: "Иә, кез келген ауа райында тәулік бойы жұмыс істейміз. Арнайы жылыту жабдықтарымен және қуатты бустерлермен шығамыз.",
+        form_title: "Шебер дәл қазір керек пе?",
+        form_subtitle: "Өтінім қалдырыңыз — WhatsApp-та хабарлама қалыптасады",
+        form_name_label: "Сіздің атыңыз",
+        form_name_ph: "Атыңызды енгізіңіз",
+        form_phone_label: "Телефон нөмірі",
+        form_issue_label: "Көлік маркасы және мәселе",
+        form_issue_ph: "Мысалы: Тойота Камри, от алмай тұр",
+        form_btn: "Автоэлектрикті шұғыл шақыру",
+        mob_call: "Шақыру"
     },
-
     en: {
-        // Шапка / Навигация
-        navServices: "Services",
-        navAdvantages: "Advantages",
-        navFaq: "FAQ",
-        navReviews: "Reviews",
-        navContact: "Contacts",
-        callEmergency: "24/7 Mobile Service",
-
-        // Главный блок (Hero)
-        heroBadge: "⚡ 20–40 min arrival in Astana",
-        heroTitle: "Mobile Auto Electrician in Astana",
-        heroSubtitle: "Computer diagnostics, engine jump-start, alarm override, and roadside electrical repair.",
-        btnCallMaster: "Call Electrician",
-        btnWhatsApp: "Chat on WhatsApp",
-        heroStat1: "15+ Years Exp",
-        heroStat2: "24/7 Available",
-        heroStat3: "100% Guarantee",
-
-        // Секция Услуг
-        servicesTitle: "Our Services",
-        servicesSubtitle: "We resolve any automotive electrical issues for all vehicle makes and models",
-        service1Title: "Engine Jump Start / Battery",
-        service1Desc: "12/24V boost start, battery replacement, stalled vehicle troubleshooting.",
-        service2Title: "Computer Diagnostics",
-        service2Desc: "Check Engine error reset, full scanner diagnostics with Launch & Autel.",
-        service3Title: "Alarm & Immobilizer Bypass",
-        service3Desc: "Emergency bypass for StarLine, Pandora, immobilizers, and hidden cutoffs.",
-        service4Title: "Alternator & Starter Repair",
-        service4Desc: "On-site diagnostics & repair, bendix, relay, brush replacements.",
-        service5Title: "Short Circuit Search",
-        service5Desc: "Current leak detection, wiring harness repair after shorts or water damage.",
-        service6Title: "Equipment Installation",
-        service6Desc: "Installation of alarms, parking sensors, dashcams, and LED lights.",
-
-        // Преимущества
-        advTitle: "Why Choose Us",
-        adv1Title: "Fast Arrival",
-        adv1Desc: "We reach any district of Astana within 20–40 minutes.",
-        adv2Title: "Pro Equipment",
-        adv2Desc: "We use dealer-grade diagnostic scanners and tools.",
-        adv3Title: "Upfront Pricing",
-        adv3Desc: "Cost is agreed upon before starting any work.",
-
-        // Форма заявки
-        formTitle: "Need an Auto Electrician Right Now?",
-        formSubtitle: "Fill out the form and a technician will contact you within 2 minutes",
-        nameLabel: "Your Name",
-        namePlaceholder: "e.g., Alex",
-        phoneLabel: "Phone Number",
-        phonePlaceholder: "+7 (705) 000-00-00",
-        issueLabel: "Issue / Car Model",
-        issuePlaceholder: "e.g., Toyota Camry, won't start",
-        btnSubmitForm: "Send via WhatsApp",
-
-        // Вопросы и ответы (FAQ)
-        faqTitle: "Frequently Asked Questions",
-        faq1Q: "How fast does the auto electrician arrive?",
-        faq1A: "On average, arrival takes 20–40 minutes depending on traffic and your district in Astana.",
-        faq2Q: "How much does call-out & diagnostics cost?",
-        faq2A: "Call-out and basic computer diagnostics start from 5,000 KZT. Exact pricing is confirmed over the phone.",
-        faq3Q: "Do you service suburban areas or highways?",
-        faq3A: "Yes, we cover Astana suburbs (Kosshy, Zhibek Zholy, Ilyinka, etc.). Rates are discussed individually.",
-        faq4Q: "What warranty do you provide?",
-        faq4A: "We provide a 1 to 6-month warranty depending on the type of work performed.",
-
-        // Отзывы и Модальное окно
-        reviewsTitle: "Client Reviews",
-        btnOpenReviewModal: "Leave a Review",
-        modalTitle: "Write a Review",
-        reviewNameLabel: "Your Name",
-        reviewNamePlaceholder: "John",
-        reviewGenderLabel: "Gender",
-        genderMale: "Male",
-        genderFemale: "Female",
-        reviewCarLabel: "Car Model",
-        reviewCarPlaceholder: "Lexus GS300",
-        reviewRatingLabel: "Rating",
-        reviewTextLabel: "Your Review",
-        reviewTextPlaceholder: "Share your experience...",
-        btnSubmitReview: "Publish Review",
-
-        // WhatsApp Сообщения
-        waGreeting: "Hello! My name is",
-        waPhone: "My phone number",
-        waIssueLabel: "Issue / Vehicle",
-        waDefaultIssue: "Urgent auto electrician call-out required.",
-
-        // Футер & Статусы
-        today: "Today",
-        justNow: "Just now",
-        footerRights: "All rights reserved.",
-        footerLocation: "Astana city, on-site service across the city and suburbs"
+        doc_title: "Mobile Auto Electrician Astana 24/7 | Emergency Diagnostics & Repair",
+        top_bar: "On-duty crew on line in Astana. Arrival from 15 minutes!",
+        header_sub: "Astana • 24/7",
+        btn_header: "Emergency Call",
+        badge_equipment: "Professional Dealer Equipment",
+        hero_title: 'Emergency Auto Electric Repair <br class="hidden sm:block"/> On-Site in Astana <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">24/7</span>',
+        hero_desc: "We fix any malfunctions right on the spot. Engine start, alarm unlocking, computer diagnostics, and wiring repair.",
+        btn_call: "Call Technician",
+        feat1_title: "Arrival 15–25 min",
+        feat1_sub: "In all districts",
+        feat2_title: "24/7 Available",
+        feat2_sub: "No days off",
+        feat3_title: "Multi-scanner",
+        feat3_sub: "Accurate ECU reading",
+        feat4_title: "On-site Repair",
+        feat4_sub: "No tow truck needed",
+        services_title: "Mobile Auto Electrician Services",
+        services_subtitle: "Promptly solving problems of any complexity right at your parking spot",
+        serv1_title: "Engine Jump Start 12V–24V",
+        serv1_desc: "Safe engine start with a dead battery using a professional booster without risk to electronics.",
+        serv2_title: "Computer Diagnostics",
+        serv2_desc: "Deep scanning of ECU, Automatic Transmission, ABS, SRS Airbag. Clearing Check Engine codes on site.",
+        serv3_title: "Car Alarm Unlocking",
+        serv3_desc: "Emergency shutdown and unlocking of StarLine, Pandora, Tomahawk, immobilizers, and kill switches.",
+        serv4_title: "Power Drain & Short Circuits",
+        serv4_desc: "Eliminating causes of fast battery drain. Locating short circuits and replacing burnt wiring.",
+        serv5_title: "Alternator & Starter Repair",
+        serv5_desc: "Charging system diagnostics. Express replacement of brushes, voltage regulators, and starter drives.",
+        serv6_title: "Pre-Purchase Inspection",
+        serv6_desc: "Comprehensive check of vehicle electronics before buying. Scanning real mileage and hidden fault history.",
+        districts_title: "Service Area in Astana & Suburbs",
+        districts_desc: "Crews are deployed in all districts of the capital for maximum arrival speed",
+        btn_eta: "Check Arrival Time",
+        dist1_title: "Esil District",
+        dist1_desc: "Left Bank, Expo, Khan Shatyr",
+        dist2_title: "Almaty District",
+        dist2_desc: "Right Bank, South-East, Pyramid",
+        dist3_title: "Saryarka District",
+        dist3_desc: "Old Town, Train Station, Embankment",
+        dist4_title: "Baikonur & Nura",
+        dist4_desc: "Industrial Area, Zhagalau, Ilyinka",
+        rating_badge: "5.0 out of 5 Rating based on customer reviews",
+        reviews_title: "Customer Reviews",
+        reviews_subtitle: "Real reviews from car owners we helped on the road in Astana",
+        rev1_name: "Arman Nurlanov",
+        rev1_car: "Toyota Camry • Esil district",
+        rev1_text: "Got stuck at night near Khan Shatyr, the car didn't respond to the key at all. The master arrived in 20 minutes, quickly found the issue — an alarm glitch. Unlocked it and started the engine. Thanks for the speed!",
+        rev2_name: "Dmitry M.",
+        rev2_car: "Hyundai Tucson • Almaty district",
+        rev2_text: "Battery died at -30°C, my friends' basic booster couldn't handle it. Called the electrician — came with heavy-duty gear, jump-started in a couple minutes, and checked the alternator. Great service!",
+        rev3_name: "Bauyrzhan K.",
+        rev3_car: "Lexus GS • Saryarka district",
+        rev3_text: "Had a power leak draining the battery overnight. The specialist arrived with a scanner and multimeter, found a short circuit in the radio within an hour, and fixed it on site. Fair prices.",
+        rev4_name: "Elena V.",
+        rev4_car: "Kia Rio • Nura district",
+        rev4_text: "Ordered an inspection before buying a car. The master checked all control units, found hidden error codes, and confirmed the electronics were fine. Helped a lot with the decision!",
+        faq_title: "Frequently Asked Questions",
+        faq1_q: "How fast will the technician arrive?",
+        faq1_a: "Average arrival time is between 15 and 30 minutes depending on the Astana district and traffic conditions.",
+        faq2_q: "Do you work in severe cold weather?",
+        faq2_a: "Yes, we work 24/7 in any weather. We come equipped with special thermal tools and high-power jump starters.",
+        form_title: "Need a technician right now?",
+        form_subtitle: "Fill out the form — a message will be generated in WhatsApp",
+        form_name_label: "Your Name",
+        form_name_ph: "Enter your name",
+        form_phone_label: "Phone Number",
+        form_issue_label: "Car Model & Issue",
+        form_issue_ph: "Example: Toyota Camry, won't start",
+        form_btn: "Call Auto Electrician Now",
+        mob_call: "Call Now"
     }
 };
-
-// Текущий язык (сохраняем в localStorage, по умолчанию 'ru')
-let currentLang = localStorage.getItem('site_lang') || 'ru';
 
 // Функция переключения языка
 function setLanguage(lang) {
     if (!translations[lang]) return;
-    
-    currentLang = lang;
-    localStorage.setItem('site_lang', lang);
-    document.documentElement.lang = lang;
 
-    // 1. Тексты элементов с атрибутом data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(elem => {
-        const key = elem.getAttribute('data-i18n');
+    // Обновляем заголовок вкладки
+    document.title = translations[lang].doc_title;
+
+    // Текстовые элементы
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
         if (translations[lang][key]) {
-            elem.textContent = translations[lang][key];
+            element.innerHTML = translations[lang][key];
         }
     });
 
-    // 2. Placeholder элементов с атрибутом data-i18n-placeholder
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(elem => {
-        const key = elem.getAttribute('data-i18n-placeholder');
+    // Элементы с placeholder
+    document.querySelectorAll('[data-i18n-ph]').forEach(element => {
+        const key = element.getAttribute('data-i18n-ph');
         if (translations[lang][key]) {
-            elem.placeholder = translations[lang][key];
+            element.setAttribute('placeholder', translations[lang][key]);
         }
     });
 
-    // 3. Переключение подсветки активной кнопки языка
-    document.querySelectorAll('[data-lang]').forEach(btn => {
-        const isActive = btn.getAttribute('data-lang') === lang;
-        btn.classList.toggle('bg-amber-500', isActive);
-        btn.classList.toggle('text-slate-950', isActive);
-        btn.classList.toggle('text-white', !isActive);
+    // Активность кнопок языков
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active', 'bg-amber-500', 'text-slate-950');
+            btn.classList.remove('hover:text-white');
+        } else {
+            btn.classList.remove('active', 'bg-amber-500', 'text-slate-950');
+            btn.classList.add('hover:text-white');
+        }
     });
+
+    // Сохраняем выбор в localStorage
+    localStorage.setItem('preferred_lang', lang);
 }
 
-// Перехват кликов по кнопкам языков (RU / KK / EN)
-document.querySelectorAll('[data-lang]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const selectedLang = btn.getAttribute('data-lang');
-        setLanguage(selectedLang);
+// Инициализация кнопок языка
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
     });
 });
 
-// --- 2. Аккордеон FAQ ---
+// Аккордеон FAQ
 document.querySelectorAll('.faq-toggle').forEach(button => {
     button.addEventListener('click', () => {
         const content = button.nextElementSibling;
-        const icon = button.querySelector('i');
-        
-        if (!content) return;
-
         button.classList.toggle('active');
         content.classList.toggle('hidden');
-        
-        if (icon) {
-            icon.classList.toggle('rotate-180');
-        }
     });
 });
 
-// --- 3. Форма заявки с отправкой в WhatsApp ---
-const leadForm = document.getElementById('leadForm');
-if (leadForm) {
-    leadForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// Перенаправление формы прямо в WhatsApp
+document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-        const name = document.getElementById('name')?.value.trim() || '';
-        const phone = document.getElementById('phone')?.value.trim() || '';
-        const issue = document.getElementById('issue')?.value.trim() || '';
-        const t = translations[currentLang] || translations.ru;
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const issue = document.getElementById('issue').value.trim();
 
-        let message = `${t.waGreeting} ${name}.\n`;
-        message += `📞 ${t.waPhone}: ${phone}\n`;
-        message += issue 
-            ? `🛠 ${t.waIssueLabel}: ${issue}` 
-            : `🛠 ${t.waDefaultIssue}`;
-
-        const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`, '_blank');
-    });
-}
-
-// --- 4. Отзывы ---
-const reviewModal = document.getElementById('reviewModal');
-const openReviewBtn = document.getElementById('openReviewModal');
-const closeReviewBtn = document.getElementById('closeReviewModal');
-const addReviewForm = document.getElementById('addReviewForm');
-const reviewsContainer = document.getElementById('reviewsContainer');
-
-function escapeHtml(str) {
-    if (!str) return '';
-    return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
-
-function createReviewElement(review) {
-    const isFemale = review.gender === 'female';
-    const avatarBg = isFemale 
-        ? 'bg-pink-500/10 border-pink-500/30 text-pink-400' 
-        : 'bg-amber-500/10 border-amber-500/30 text-amber-400';
-    const avatarIcon = isFemale ? 'fa-user-nurse' : 'fa-user';
-
-    let starsHtml = '';
-    for (let i = 0; i < 5; i++) {
-        starsHtml += i < review.rating 
-            ? '<i class="fa-solid fa-star"></i>' 
-            : '<i class="fa-regular fa-star"></i>';
+    // Формирование текста сообщения
+    let message = `Здравствуйте! Меня зовут ${name}.\n`;
+    message += `📞 Мой телефон: ${phone}\n`;
+    if (issue) {
+        message += `🛠 Проблема / Авто: ${issue}`;
+    } else {
+        message += `🛠 Нужен срочный выезд автоэлектрика.`;
     }
 
-    const t = translations[currentLang] || translations.ru;
-    const reviewDate = review.date || t.today;
-
-    const card = document.createElement('div');
-    card.className = 'glass-card p-6 rounded-2xl flex flex-col justify-between animate-fade-in';
-    card.innerHTML = `
-        <div>
-            <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 border rounded-full flex items-center justify-center font-bold ${avatarBg}">
-                        <i class="fa-solid ${avatarIcon} text-lg"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-white text-base">${escapeHtml(review.name)}</h4>
-                        <span class="text-xs text-slate-400">${escapeHtml(review.car)}</span>
-                    </div>
-                </div>
-                <div class="flex text-amber-400 text-xs gap-1">
-                    ${starsHtml}
-                </div>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed">${escapeHtml(review.text)}</p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500">${escapeHtml(reviewDate)}</div>
-    `;
-    return card;
-}
-
-function loadSavedReviews() {
-    if (!reviewsContainer) return;
-    const saved = localStorage.getItem('autoelectric_custom_reviews');
-    if (!saved) return;
-
-    try {
-        const reviews = JSON.parse(saved);
-        reviews.forEach(review => {
-            const elem = createReviewElement(review);
-            reviewsContainer.prepend(elem);
-        });
-    } catch (e) {
-        console.error('Ошибка загрузки отзывов из localStorage', e);
-    }
-}
-
-function saveReviewToLocal(review) {
-    try {
-        const saved = localStorage.getItem('autoelectric_custom_reviews');
-        let reviews = saved ? JSON.parse(saved) : [];
-        reviews.push(review);
-        localStorage.setItem('autoelectric_custom_reviews', JSON.stringify(reviews));
-    } catch (e) {
-        console.error('Ошибка сохранения отзыва в localStorage', e);
-    }
-}
-
-function closeModal() {
-    if (reviewModal) {
-        reviewModal.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
-}
-
-if (openReviewBtn && reviewModal) {
-    openReviewBtn.addEventListener('click', () => {
-        reviewModal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    });
-}
-
-if (closeReviewBtn) {
-    closeReviewBtn.addEventListener('click', closeModal);
-}
-
-if (reviewModal) {
-    reviewModal.addEventListener('click', (e) => {
-        if (e.target === reviewModal) closeModal();
-    });
-}
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && reviewModal && !reviewModal.classList.contains('hidden')) {
-        closeModal();
-    }
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`, '_blank');
 });
 
-if (addReviewForm) {
-    addReviewForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('reviewName')?.value.trim();
-        const gender = document.getElementById('reviewGender')?.value;
-        const car = document.getElementById('reviewCar')?.value.trim();
-        const rating = parseInt(document.getElementById('reviewRating')?.value || '5', 10);
-        const text = document.getElementById('reviewText')?.value.trim();
-
-        if (!name || !car || !text || !reviewsContainer) return;
-
-        let locale = 'ru-RU';
-        if (currentLang === 'kk') locale = 'kk-KZ';
-        if (currentLang === 'en') locale = 'en-US';
-
-        const formattedDate = new Date().toLocaleDateString(locale, { day: 'numeric', month: 'long' });
-
-        const newReview = {
-            name,
-            gender,
-            car,
-            rating,
-            text,
-            date: formattedDate
-        };
-
-        const reviewCard = createReviewElement(newReview);
-        reviewsContainer.prepend(reviewCard);
-
-        saveReviewToLocal(newReview);
-
-        addReviewForm.reset();
-        closeModal();
-    });
-}
-
-// --- 5. Старт при загрузке DOM ---
+// При загрузке страницы проверяем сохраненный язык
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(currentLang);
-    loadSavedReviews();
+    const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+    setLanguage(savedLang);
 });
